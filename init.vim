@@ -1,33 +1,29 @@
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+"before plugins --------------------------
 
-" Required:
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+source ~/dotnvim/basic.vim
 
-" Required:
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+"end before plugins ----------------------
 
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+"Plug Scripts-------------------------
 
-  source dein_plugins.vim
+call plug#begin(stdpath('data') . '/plugged')
 
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
+" files tree browser
+Plug 'scrooloose/nerdtree'
 
-" Required:
-filetype plugin indent on
-syntax enable
+" files search
+Plug 'ctrlpvim/ctrlp.vim'
 
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
+" Initialize plugin system
+call plug#end()
 
-"End dein Scripts-------------------------
+" end Plug Scripts-------------------------
+
+"plugins configuration--------------------
+
+" runs all vim files inside dotnvim/plugins folder
+for f in split(glob('~/dotnvim/plugins/*.vim'), '\n')
+    exe 'source' f
+endfor
+
+"end plugins configuration--------------------
