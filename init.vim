@@ -36,5 +36,3 @@ endfor
 syntax enable
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
-
-let g:Guifont="Sauce Code Powerline Light:h34"
