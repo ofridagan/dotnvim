@@ -1,3 +1,5 @@
+set termguicolors
+
 "before plugins --------------------------
 
 source ~/dotnvim/basic.vim
@@ -7,6 +9,9 @@ source ~/dotnvim/basic.vim
 "Plug Scripts-------------------------
 
 call plug#begin(stdpath('data') . '/plugged')
+
+" color scheme
+Plug 'morhetz/gruvbox'
 
 " files tree browser
 Plug 'scrooloose/nerdtree'
@@ -27,3 +32,9 @@ for f in split(glob('~/dotnvim/plugins/*.vim'), '\n')
 endfor
 
 "end plugins configuration--------------------
+
+syntax enable
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+
+let g:Guifont="Sauce Code Powerline Light:h34"
