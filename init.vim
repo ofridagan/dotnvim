@@ -30,7 +30,6 @@ Plug 'kchmck/vim-coffee-script'
 " comments
 Plug 'scrooloose/nerdcommenter'
 
-
 " Initialize plugin system
 call plug#end()
 
