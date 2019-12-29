@@ -4,7 +4,7 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-" Enable filetype plugins
+" Enable filetype plugins. i.e languge specific configurations files
 filetype plugin on
 filetype indent on
 
