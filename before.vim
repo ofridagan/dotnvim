@@ -1,6 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" No new line at end of file
+:set nofixendofline
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
