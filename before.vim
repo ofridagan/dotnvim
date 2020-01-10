@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " No new line at end of file
-:set nofixendofline
+set nofixendofline
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -11,6 +11,15 @@ set history=500
 " Enable filetype plugins. i.e languge specific configurations files
 filetype plugin on
 filetype indent on
+
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+" On pressing tab, insert 2 spaces
+set expandtab
+
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -34,9 +43,6 @@ set termguicolors
 set relativenumber
 " show line number on current line
 set number
-
-" tab - 2 spaces
-set shiftwidth=2
 
 " reload vim configuration
 nnoremap <Leader>rr :source ~/.config/nvim/init.vim <CR>
